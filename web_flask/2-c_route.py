@@ -24,8 +24,8 @@ def hbnb():
 @app.route('/c/<text>', strict_slashes=False)
 def text_file():
     """Display content of text"""
-    text.replace("_", " ")
-    return "C $text"
+    text = text.replace("_", " ")
+    return "C {}".format(text)
 
 
 if __name__ == '__main__':
